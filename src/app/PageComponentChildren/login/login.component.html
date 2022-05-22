@@ -1,0 +1,16 @@
+<div class="container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group d-flex flex-column mb-4">
+      <input id="userName" formControlName="userName" class="form-control"  placeholder="username" />
+
+      <span *ngIf="userName?.invalid&&(formIsSubmitted|async)">نام کاربری را وارد کنید</span>
+    </div>
+
+    <div class="form-group d-flex flex-column mb-4">
+      <input class="form-control" id="password" placeholder="password" formControlName="password"/>
+      <span *ngIf="password?.invalid&&(formIsSubmitted|async)">رمزعبور را وارد کنید</span>
+    </div>
+    <button type="submit" >login</button>
+  </form>
+</div>
+

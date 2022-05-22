@@ -1,0 +1,15 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" >Custom Market</a>
+      <button style="margin: 10px" (click)="routToPageLogin()" class="btn btn-light text-success">Login</button>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <app-product-list-item-home  *ngFor="let item of productList" [cartProductItem]="item" ></app-product-list-item-home>
+  </div>
+</div>
+
+

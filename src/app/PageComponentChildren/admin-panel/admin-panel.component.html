@@ -1,0 +1,7 @@
+<div class="container" style="alignment: center !important;">
+  <div class="card">
+    <div class="card-body">
+      <span [ngStyle]="{'color':(loading|async)?'green':'transparent'}" >{{loading|async}}</span>
+    </div>
+  </div>
+</div>
